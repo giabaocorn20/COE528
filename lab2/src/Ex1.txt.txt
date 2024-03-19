@@ -1,0 +1,26 @@
+//Requires:  The 2 input arrays must not be null and must be interger. (pre-sorted as well)
+//Modifies: <Array a>
+//Effects: Change the max interger of the 2nd array to the 1st array
+public static void substituteMax(int[] a, int[] b) {
+int maxOfA = a[0];
+int index = 0;
+for (int i = 0; i < a.length; i++) {
+if(a[i] > maxOfA) {
+maxOfA = a[i];
+index = i;
+}
+}
+int maxOfB = b[0];
+for (int i = 0; i < b.length; i++) {
+if(b[i] > maxOfB) {
+maxOfB = b[i];
+}
+}
+a[index] = maxOfB;
+}
+
+cd D:\COE528\lab_2\src\main\java
+
+javac coe528\lab2\Ex2.java
+
+java coe528.lab2.Ex2 1
